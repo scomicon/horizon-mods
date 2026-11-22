@@ -1,0 +1,45 @@
+id = "zenith"
+kind = "shader"
+name = "Zenith"
+summary = "Clean-room PBR shader pack for Horizon 0.2 with PCSS shadows, volumetric light, custom skies, water refraction, GTAO, and AgX tone mapping."
+description = """
+**Zenith** is a clean-room, MIT-licensed PBR shader pack built natively for **Horizon** (Shader API `0.2`, `schema = 1`).
+
+### Features
+- **Physically-Based Materials:** LabPBR 1.3 support with per-sprite detection and procedural PBR fallback, parallax occlusion mapping (POM) paired with native vertex displacement, copper oxidation finishes, amethyst scatter, foliage subsurface scattering, and rain wetness/puddles.
+- **Lighting & Shadows:** Variable-penumbra PCSS shadows, translucent colored shadows through stained glass, cloud shadows, multi-bounce GTAO, directional interior lamp shading, and colored voxel & dynamic particle lighting.
+- **Water & Underwater Optics:** Multi-swell animated water waves with distance shimmer fade, planar & sky-LUT reflections, depth-aware screen-space refraction, dispersive RGB caustics, cellular rain ripples, Snell-refracted underwater light shafts, and calibrated underwater visibility.
+- **Atmosphere & Weather:** 64x33 Hillaire sky-view LUT with biome climate adaptation, volumetric cumulus and high cirrus clouds, night stars, Milky Way, and northern aurora, 3D domain-warped dawn mist, snowstorms, and powder-snow immersion.
+- **The End & The Nether:** Custom cosmic nebula, dual-scale starfield, and End Warp Rift portal in The End; volcanic ash haze and lava underglow in The Nether.
+- **Post-Processing:** Screen-space reflections (SSR), multi-level bloom pyramid, AgX-inspired HDR tone mapping, log-luminance histogram auto-exposure, FXAA and morphological anti-aliasing, and optional cinematic optics (depth of field, motion blur, lens flare, color moods).
+
+### Performance & Presets
+Includes **Performance**, **Balanced** (default), and **Quality** presets plus 61 configurable options organized by category in Horizon's shader settings.
+
+### Requirements & Source
+- Built for **Horizon Shader API 0.2** (`schema = 1`, Horizon `nightly-2026-11-21` / `8f83e5c` or compatible builds).
+- Full source code, optional **Zenith RT** hardware ray-tracing overlay (`variants/zenith-rt`), and algorithm citations (`PROVENANCE.md`) are available in the GitHub repository."""
+authors = ["Zenith Contributors"]
+owners = ["scomicon"]
+owner_ids = [123747620]
+license = "MIT"
+source = "https://github.com/scomicon/Zenith"
+icon = "icons/zenith.png"
+categories = ["realistic", "pbr", "atmosphere"]
+tags = ["pbr", "shadows", "reflections", "volumetric", "atmosphere", "water", "agx", "gtao"]
+screenshots = ["screenshots/zenith/1.jpg", "screenshots/zenith/2.jpg", "screenshots/zenith/3.jpg", "screenshots/zenith/4.jpg", "screenshots/zenith/5.jpg"]
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-22"
+game = "26.3"
+file = "zenith-0.1.0.hshader"
+sha256 = "e64925aeea3d140b11d0a1d5d5f6c1fa0b9d7e3f6e7a596c5f001fc6de8b79a4"
+changelog = """
+Initial release of Zenith 0.1.0 for Horizon Shader API 0.2:
+- Physically-based material shading (LabPBR 1.3 + procedural PBR relief, POM, native vertex displacement, rain wetness and puddles)
+- Variable-penumbra PCSS shadows, translucent colored glass shadows, cloud shadows, and multi-bounce GTAO
+- 4-swell animated water with planar/sky reflections, depth-aware refraction, dispersive caustics, rain ripples, and calibrated underwater visibility
+- Hillaire sky-view LUT atmosphere, volumetric cumulus & cirrus clouds, Milky Way & aurora, volumetric sunlight shafts, dawn river mist, and snowstorms
+- Custom cosmic End sky with End Warp Rift portal and volcanic Nether atmosphere
+- AgX-inspired HDR tone mapping, histogram auto-exposure, bloom pyramid, FXAA / morphological AA, and optional cinematic optics"""
