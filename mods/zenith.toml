@@ -30,6 +30,22 @@ tags = ["pbr", "shadows", "reflections", "volumetric", "atmosphere", "water", "a
 screenshots = ["screenshots/zenith/1.jpg", "screenshots/zenith/2.jpg", "screenshots/zenith/3.jpg", "screenshots/zenith/4.jpg", "screenshots/zenith/5.jpg"]
 
 [[versions]]
+version = "0.2.0"
+published = "2026-11-24"
+game = "26.3"
+file = "zenith-0.2.0.hshader"
+sha256 = "25d02d9388c8d6789b8136b08e925da98830cdac89009a18d56a4dd581f27df3"
+changelog = """
+Zenith 0.2.0:
+- New Ultra quality mode: the most samples everywhere (GTAO, SSR, subsurface scattering, contact shadows, light shafts, clouds) and full-resolution clouds; shadow map up to 8192 texels and 384 / 512 blocks
+- Physically based atmosphere: one haze medium (air, aerosol haze, valley fog) for aerial perspective, the horizon and the sun shafts; distant terrain and LODs fade into the horizon colour, valley fog at dawn, in rain and in humid biomes
+- Volumetric cumulus clouds with a 3D billow detail and self-shadowing, steps by quality mode
+- Glossy screen-space reflections with roughness and contact-hardening blur, Hi-Z accelerated
+- Subsurface scattering for skin, wax, snow, ice and other LabPBR subsurface materials
+- Faster: clouds baked at half resolution in a separate pass (sky with clouds 7-13 ms -> 3-4.5 ms on Quality), Hi-Z depth 1.24 -> 0.24 ms
+- Fixed: clouds jumping with view bob; looking at the sun washing out half the screen (sun shafts were about 5x too bright, the default Volumetric light 0.6 now looks like the old 0.1); dark flickering dots in the haze on leaves"""
+
+[[versions]]
 version = "0.1.0"
 published = "2026-11-22"
 game = "26.3"
