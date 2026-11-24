@@ -27,7 +27,7 @@ source = "https://github.com/scomicon/Zenith"
 icon = "icons/zenith.png"
 categories = ["realistic", "pbr", "atmosphere"]
 tags = ["pbr", "shadows", "reflections", "volumetric", "atmosphere", "water", "agx", "gtao"]
-screenshots = ["screenshots/zenith/1.jpg", "screenshots/zenith/2.jpg", "screenshots/zenith/3.jpg", "screenshots/zenith/4.jpg", "screenshots/zenith/5.jpg"]
+screenshots = ["screenshots/zenith/1.jpg", "screenshots/zenith/2.jpg", "screenshots/zenith/3.jpg", "screenshots/zenith/4.jpg", "screenshots/zenith/5.jpg", "screenshots/zenith/6.jpg", "screenshots/zenith/7.jpg"]
 
 [[versions]]
 version = "0.2.0"
