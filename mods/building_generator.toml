@@ -35,6 +35,14 @@ categories = ["decoration", "utility", "worldgen"]
 tags = ["building", "architecture", "procedural", "generator", "builder", "worldedit", "creative"]
 
 [[versions]]
+version = "0.4.2"
+published = "2026-11-27"
+game = "26.3"
+file = "building_generator-0.4.2.hmod"
+sha256 = "7d3551021fecba568996813695c9e7e7d4ec0b883ed65a4dd53655565c1cf006"
+changelog = "v0.4.2: Added real-time 3D semi-transparent bluish holographic architecture preview in the world before placement (greedy-merged walls/roofs/stairs/slabs/railings/windows/lanterns, hidden-face culling, terrain and basement geometry, Y-slice cut highlight, instant auto-updates on any parameter or crosshair change within the 4096-primitive budget) and fixed .hmod packaging to exclude disallowed paths like .gitignore."
+
+[[versions]]
 version = "0.4.1"
 published = "2026-11-26"
 game = "26.3"
