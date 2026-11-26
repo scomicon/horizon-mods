@@ -1,7 +1,7 @@
 id = "building_generator"
 kind = "native-mod"
 name = "Building Generator"
-summary = "Bilingual (EN/RU) procedural architecture generator: Settlement 2.0 cities, Biome Auto-Style, 0-100% Wear & Overgrowth, 61 themes, 72 presets & F8 hologram."
+summary = "Bilingual (EN/RU) procedural architecture mod: live 3D hologram with collision highlights, [H] frame toggle & Move 3D, container loot, Settlement 2.0, Biome Auto-Style, 72 presets."
 description = """
 **Building Generator** is an MIT-licensed procedural architecture generator for **Horizon** (Minecraft: Java Edition `26.3`, Horizon Native Mod API `0.2`).
 
@@ -33,6 +33,14 @@ source = "https://github.com/scomicon/building-generator"
 icon = "icons/building_generator.png"
 categories = ["decoration", "utility", "worldgen"]
 tags = ["building", "architecture", "procedural", "generator", "builder", "worldedit", "creative"]
+
+[[versions]]
+version = "0.5.0"
+published = "2026-11-27"
+game = "26.3"
+file = "building_generator-0.5.0.hmod"
+sha256 = "3266dbd15ff5f7ce8676ef1010d02a912a41c86ee0767e0a8cb0deae70403fe"
+changelog = "v0.5.0: Added independent Blue Frame hide controls (Frame: ON/OFF, Hide@Build, global [H]/[Shift+H] toggle & clean HUD hint), live world Collision Highlighting (coral-orange obstacles & exact Air Only preview filtering + exposed structural seam lines), in-world Move 3D mode (Arrows/IJKL, PgUp/Dn, R, [/], C, Enter direct build), curated loot & bilingual names in chests/barrels/smokers/furnaces/brewing stands, multi-arm tall hall chandeliers + MageTower containers, and smart uphill/stepped doorway terrain & Settlement entrance integration."
 
 [[versions]]
 version = "0.4.3"
