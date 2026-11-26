@@ -1,25 +1,26 @@
 id = "building_generator"
 kind = "native-mod"
 name = "Building Generator"
-summary = "Noise-driven procedural architectural generator with 61 themes, 72 catalog presets, 3D hologram preview, and 30-slot materials."
+summary = "Bilingual (EN/RU) procedural architecture generator: 61 themes, 72 presets, 3D hologram preview, and 30-slot materials."
 description = """
 **Building Generator** is an MIT-licensed procedural architecture generator for **Horizon** (Minecraft: Java Edition `26.3`, Horizon Native Mod API `0.2`).
 
-Generate detailed multi-room houses, castles, temples, monumental landmarks, bridges, airship docks, and entire canal settlements from Russian or English text prompts, noise seeds, or the built-in 72-structure catalog.
+Generate detailed multi-room houses, castles, temples, monumental landmarks, bridges, airship docks, and entire canal settlements from English or Russian text prompts, noise seeds, or the built-in 72-structure catalog. Full **English (default) & Russian** localization with an in-game **`Lang: EN` / `Язык: RU`** toggle button in the GUI header.
 
 ### Key Features
 
 - **61 Structure Themes & 72 Presets:** Pantheon, Parthenon, Colosseum, Hanging Gardens, Ishtar Gate, Mosque Palace, Angkor Temple, Water Shrine, Sphinx, Bailey Castle, City Gatehouse, Monastery, Jousting Arena, Military Outpost, Star Fort, Apothecary, Bakery/Winery, Town Hall, Opera House, Museum, Bank Vault, Academy, Galleon Ship, Shipyard, Train Station with locomotive, Airship Dock, Hydroelectric Dam, Circus Big Top, Skyscraper, Steampunk Factory, Stadium, Bunker, Spaceport Rocket, Offshore Oil Rig, Mage Tower, Hobbit Hole, Mushroom Cottage, Subterranean Mausoleum, Dwarven Hall, Dragon Sanctuary, Stonehenge Portal, Viking Longhouse, Alpine Chalet, Desert Kasbah, 9 Bridge Archetypes, and Venetian Floating Village (`FloatingVillage`).
-- **Interactive GUI (`F8`):**
+- **Interactive GUI (`F8`) & Instant EN/RU Switch:**
+  - **Header Toggle:** One-click `Lang: EN` / `Язык: RU` switch translating tabs, presets, material slots, block picker, HUD overlays, BossBar, and `/buildgen` messages immediately (starts in English; saved locally to `lang.txt`).
   - **1. Size & Area:** custom footprints up to `96×96×48`, `-Y`/`+Y` elevation nudging, interactive world corner selection (`R` rotate entrance, `PgUp`/`PgDn` height), terrain skirt & stilt adaptation over water, disk-persisted favorites (`favorites.txt`), `BG2:...` share codes, and live 3D hologram preview with vertical slicing (`[` / `]`).
-  - **2. Style & Noise + Preset Catalog:** category/style/roof overrides, 5 tri-state feature toggles, seed history, quick navigation (`◀` / `▶`), and a dedicated searchable 72-preset Catalog browser.
+  - **2. Style & Noise + Preset Catalog:** category/style/roof overrides, 5 tri-state feature toggles, seed history, quick navigation (`◀` / `▶`), and a dedicated searchable 72-preset Catalog browser (supports both EN and RU queries).
   - **3. Materials (30 Architectural Slots):** scrollable inspector with multi-block ordered slot lists, 4 procedural mixing modes (`Patches`, `Scatter`, `Stripes`, `Checker`), and a searchable block picker (`Rec.` / `All` world blocks).
-- **Commands:** `/buildgen`, `/buildgen preset <name>`, `/buildgen generate <description>`, `/buildgen size <w> <d> <h> <description>`, `/buildgen reroll`, `/buildgen undo` (up to 5 steps), `/buildgen help`.
+- **Commands:** `/buildgen`, `/buildgen preset <name>`, `/buildgen generate <description>`, `/buildgen size <w> <d> <h> <description>`, `/buildgen reroll`, `/buildgen undo` (up to 5 steps), `/buildgen lang <en|ru>`, `/buildgen help`.
 
 ### Permissions & Data
 
 - Designed for Creative / operator building (world edits execute cleanly in two phases on the server side with undo history).
-- Client favorites are written locally only to `horizon-mod-data/building_generator/favorites.txt`. Makes no external network requests.
+- Client favorites and language preference are written locally only to `horizon-mod-data/building_generator/favorites.txt` and `lang.txt`. Makes no external network requests.
 """
 authors = ["Building Generator Contributors"]
 owners = ["scomicon"]
@@ -31,9 +32,9 @@ categories = ["decoration", "utility", "worldgen"]
 tags = ["building", "architecture", "procedural", "generator", "builder", "worldedit", "creative"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-26"
 game = "26.3"
-file = "building_generator-0.2.0.hmod"
-sha256 = "97143c05821ed4652057d10e9b272e53e8ce3e892155906ebf5b78e5201433b1"
-changelog = "v0.2.0: 61 architectural themes and 72 built-in presets, searchable GUI Preset Catalog, 9 seeded bridge archetypes, Venetian Floating Village, 30-slot ordered material lists with 4 mix modes, BG2 share codes, 3D sliced hologram preview, two-phase placement, and 5-step undo. Verified on Horizon 26.3 (pinned 8f83e5c + uses.json compatibility on f1bb66f)."
+file = "building_generator-0.2.1.hmod"
+sha256 = "37b7f67087791353870a6c255e475300d819cb74da3070f959a4e7fef5b88168"
+changelog = "v0.2.1: Full English and Russian localization across GUI, 72-preset catalog, 30 material slots, HUD/BossBar, and /buildgen commands; header [Lang: EN] / [Язык: RU] toggle button persisted to lang.txt; /buildgen lang <en|ru>; expanded English parser keywords; clean metadata & attribution."
