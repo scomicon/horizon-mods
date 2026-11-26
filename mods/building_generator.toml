@@ -1,7 +1,7 @@
 id = "building_generator"
 kind = "native-mod"
 name = "Building Generator"
-summary = "Bilingual (EN/RU) procedural architecture generator: 61 themes, 72 presets, 3D hologram preview, and 30-slot materials."
+summary = "Bilingual (EN/RU) procedural architecture generator: 61 themes, 72 presets, 3D hologram preview, BOM estimate, air-only mode & OP security."
 description = """
 **Building Generator** is an MIT-licensed procedural architecture generator for **Horizon** (Minecraft: Java Edition `26.3`, Horizon Native Mod API `0.2`).
 
@@ -11,15 +11,15 @@ Generate detailed multi-room houses, castles, temples, monumental landmarks, bri
 
 - **61 Structure Themes & 72 Presets:** Pantheon, Parthenon, Colosseum, Hanging Gardens, Ishtar Gate, Mosque Palace, Angkor Temple, Water Shrine, Sphinx, Bailey Castle, City Gatehouse, Monastery, Jousting Arena, Military Outpost, Star Fort, Apothecary, Bakery/Winery, Town Hall, Opera House, Museum, Bank Vault, Academy, Galleon Ship, Shipyard, Train Station with locomotive, Airship Dock, Hydroelectric Dam, Circus Big Top, Skyscraper, Steampunk Factory, Stadium, Bunker, Spaceport Rocket, Offshore Oil Rig, Mage Tower, Hobbit Hole, Mushroom Cottage, Subterranean Mausoleum, Dwarven Hall, Dragon Sanctuary, Stonehenge Portal, Viking Longhouse, Alpine Chalet, Desert Kasbah, 9 Bridge Archetypes, and Venetian Floating Village (`FloatingVillage`).
 - **Interactive GUI (`F8`) & Instant EN/RU Switch:**
-  - **Header Toggle:** One-click `Lang: EN` / `Язык: RU` switch translating tabs, presets, material slots, block picker, HUD overlays, BossBar, and `/buildgen` messages immediately (starts in English; saved locally to `lang.txt`).
-  - **1. Size & Area:** custom footprints up to `96×96×48`, `-Y`/`+Y` elevation nudging, interactive world corner selection (`R` rotate entrance, `PgUp`/`PgDn` height), terrain skirt & stilt adaptation over water, disk-persisted favorites (`favorites.txt`), `BG2:...` share codes, and live 3D hologram preview with vertical slicing (`[` / `]`).
+  - **Header Controls:** One-click `Lang: EN` / `Язык: RU` switch translating tabs, presets, material slots, BOM estimate, HUD overlays, BossBar, and `/buildgen` messages (saved locally to `lang.txt`), plus **`Blocks: N` / `Смета: N`** Material Estimate modal with block icons, stack formatting, door/bed item pairing, and clipboard export.
+  - **1. Size & Area:** custom footprints up to `96×96×48`, `-Y`/`+Y` elevation nudging, interactive world corner selection (`R` rotate entrance, `PgUp`/`PgDn` height), terrain skirt & stilt adaptation over water, **Air Only** mode (only replaces air blocks; saved in `favorites.txt` & `BG2:...` share codes), and live 3D hologram preview with vertical slicing (`[` / `]`).
   - **2. Style & Noise + Preset Catalog:** category/style/roof overrides, 5 tri-state feature toggles, seed history, quick navigation (`◀` / `▶`), and a dedicated searchable 72-preset Catalog browser (supports both EN and RU queries).
   - **3. Materials (30 Architectural Slots):** scrollable inspector with multi-block ordered slot lists, 4 procedural mixing modes (`Patches`, `Scatter`, `Stripes`, `Checker`), and a searchable block picker (`Rec.` / `All` world blocks).
-- **Commands:** `/buildgen`, `/buildgen preset <name>`, `/buildgen generate <description>`, `/buildgen size <w> <d> <h> <description>`, `/buildgen reroll`, `/buildgen undo` (up to 5 steps), `/buildgen lang <en|ru>`, `/buildgen help`.
+- **Commands:** `/buildgen`, `/buildgen preset <name>`, `/buildgen generate <description>`, `/buildgen size <w> <d> <h> <description>`, `/buildgen reroll`, `/buildgen undo`, `/buildgen redo` (up to 5 steps), `/buildgen lang <en|ru>`, `/buildgen help`.
 
 ### Permissions & Data
 
-- Designed for Creative / operator building (world edits execute cleanly in two phases on the server side with undo history).
+- **OP Level 2+ Enforced:** All build, preset, generate, size, reroll, undo, and redo commands and network payloads require operator permission level 2+; server-side bounds sanitization and `350 ms` per-player network rate limiting protect multiplayer servers (`lang` and `help` remain available to all players).
 - Client favorites and language preference are written locally only to `horizon-mod-data/building_generator/favorites.txt` and `lang.txt`. Makes no external network requests.
 """
 authors = ["Building Generator Contributors"]
@@ -30,6 +30,14 @@ source = "https://github.com/scomicon/building-generator"
 icon = "icons/building_generator.png"
 categories = ["decoration", "utility", "worldgen"]
 tags = ["building", "architecture", "procedural", "generator", "builder", "worldedit", "creative"]
+
+[[versions]]
+version = "0.3.0"
+published = "2026-11-26"
+game = "26.3"
+file = "building_generator-0.3.0.hmod"
+sha256 = "2abf01caef56a76f2946f4156fa1719260c791109cf7323e5c77e99e2a3d933e"
+changelog = "v0.3.0: Added /buildgen redo & GUI Redo (5-step Undo/Redo stack), Air Only placement filter (persisted in favorites & BG2 share codes), live Material Estimate / BOM modal with stack counts & clipboard copy, OP level 2+ command/payload enforcement, request bounds sanitization, and 350ms network rate limiting."
 
 [[versions]]
 version = "0.2.1"
