@@ -1,19 +1,22 @@
 id = "building_generator"
 kind = "native-mod"
 name = "Building Generator"
-summary = "Bilingual (EN/RU) procedural architecture generator: 61 themes, 72 presets, 3D hologram preview, BOM estimate, air-only mode & OP security."
+summary = "Bilingual (EN/RU) procedural architecture generator: Settlement 2.0 cities, Biome Auto-Style, 0-100% Wear & Overgrowth, 61 themes, 72 presets & F8 hologram."
 description = """
 **Building Generator** is an MIT-licensed procedural architecture generator for **Horizon** (Minecraft: Java Edition `26.3`, Horizon Native Mod API `0.2`).
 
-Generate detailed multi-room houses, castles, temples, monumental landmarks, bridges, airship docks, and entire canal settlements from English or Russian text prompts, noise seeds, or the built-in 72-structure catalog. Full **English (default) & Russian** localization with an in-game **`Lang: EN` / `Язык: RU`** toggle button in the GUI header.
+Generate detailed multi-room houses, castles, temples, monumental landmarks, bridges, airship docks, and entire terrain-following walled cities from English or Russian text prompts, noise seeds, or the built-in 72-structure catalog. Full **English (default) & Russian** localization with an in-game **`Lang: EN` / `Язык: RU`** toggle button in the GUI header.
 
 ### Key Features
 
-- **61 Structure Themes & 72 Presets:** Pantheon, Parthenon, Colosseum, Hanging Gardens, Ishtar Gate, Mosque Palace, Angkor Temple, Water Shrine, Sphinx, Bailey Castle, City Gatehouse, Monastery, Jousting Arena, Military Outpost, Star Fort, Apothecary, Bakery/Winery, Town Hall, Opera House, Museum, Bank Vault, Academy, Galleon Ship, Shipyard, Train Station with locomotive, Airship Dock, Hydroelectric Dam, Circus Big Top, Skyscraper, Steampunk Factory, Stadium, Bunker, Spaceport Rocket, Offshore Oil Rig, Mage Tower, Hobbit Hole, Mushroom Cottage, Subterranean Mausoleum, Dwarven Hall, Dragon Sanctuary, Stonehenge Portal, Viking Longhouse, Alpine Chalet, Desert Kasbah, 9 Bridge Archetypes, and Venetian Floating Village (`FloatingVillage`).
+- **61 Structure Themes & 72 Presets:** Pantheon, Parthenon, Colosseum, Hanging Gardens, Ishtar Gate, Mosque Palace, Angkor Temple, Water Shrine, Sphinx, Bailey Castle, City Gatehouse, Monastery, Jousting Arena, Military Outpost, Star Fort, Apothecary, Bakery/Winery, Town Hall, Opera House, Museum, Bank Vault, Academy, Galleon Ship, Shipyard, Train Station with locomotive, Airship Dock, Hydroelectric Dam, Circus Big Top, Skyscraper, Steampunk Factory, Stadium, Bunker, Spaceport Rocket, Offshore Oil Rig, Mage Tower, Hobbit Hole, Mushroom Cottage, Subterranean Mausoleum, Dwarven Hall, Dragon Sanctuary, Stonehenge Portal, Viking Longhouse, Alpine Chalet, Desert Kasbah, 9 Bridge Archetypes, Venetian Floating Village (`FloatingVillage`), and **Settlement 2.0**.
+- **Settlement 2.0 Urban Districts:** Larger `settlement`/`town`/`city` footprints (`>= 60x60`) generate secondary ring avenues, smooth terrain-following roads (`<= 1` step/tile slope) with automatic wooden/stone river bridges, up to 12 balanced district lots, intentional central parks & fountain plazas, pocket biome trees, shoreline piers, and walkable fortified perimeter ramparts with corner bastions and arched gatehouses.
+- **Biome Auto-Style & Biome Palette Engine:** When Style is `Auto` and `Biome` sync is active, client and server inspect the live world biome (`building_generator:biome_query` / `biome_reply`) and adapt both architectural style and natural block palette to the surrounding biome (`cherry_grove`, `desert`, `badlands`, `snowy`, `jungle`, `swamp`, `pale_garden`, `taiga`, `savanna`, `deep_dark`, etc.).
+- **Universal Wear / Ruin & Overgrowth (`0–100%`):** Tab 2 sliders apply structural aging across all 61 themes, landmarks, bridges, colosseum, and settlements — masonry cracking, 4-stage copper oxidation, shattered panes, height-biased collapse with fallen rubble and indoor cobwebs, directional vines, biome-aware moss/flora, and heavy-overgrowth saplings (persisted in `favorites.txt` and `BG2` v4 share codes).
 - **Interactive GUI (`F8`) & Instant EN/RU Switch:**
   - **Header Controls:** One-click `Lang: EN` / `Язык: RU` switch translating tabs, presets, material slots, BOM estimate, HUD overlays, BossBar, and `/buildgen` messages (saved locally to `lang.txt`), plus **`Blocks: N` / `Смета: N`** Material Estimate modal with block icons, stack formatting, door/bed item pairing, and clipboard export.
   - **1. Size & Area:** custom footprints up to `96×96×48`, `-Y`/`+Y` elevation nudging, interactive world corner selection (`R` rotate entrance, `PgUp`/`PgDn` height), terrain skirt & stilt adaptation over water, **Air Only** mode (only replaces air blocks; saved in `favorites.txt` & `BG2:...` share codes), and live 3D hologram preview with vertical slicing (`[` / `]`).
-  - **2. Style & Noise + Preset Catalog:** category/style/roof overrides, 5 tri-state feature toggles, seed history, quick navigation (`◀` / `▶`), and a dedicated searchable 72-preset Catalog browser (supports both EN and RU queries).
+  - **2. Style & Noise + Preset Catalog:** category/style/roof overrides, live `Biome` auto-style toggle, `Wear %` / `Moss %` controls, 5 tri-state feature toggles, seed history, quick navigation (`◀` / `▶`), and a dedicated searchable 72-preset Catalog browser (supports both EN and RU queries).
   - **3. Materials (30 Architectural Slots):** scrollable inspector with multi-block ordered slot lists, 4 procedural mixing modes (`Patches`, `Scatter`, `Stripes`, `Checker`), and a searchable block picker (`Rec.` / `All` world blocks).
 - **Commands:** `/buildgen`, `/buildgen preset <name>`, `/buildgen generate <description>`, `/buildgen size <w> <d> <h> <description>`, `/buildgen reroll`, `/buildgen undo`, `/buildgen redo` (up to 5 steps), `/buildgen lang <en|ru>`, `/buildgen help`.
 
@@ -30,6 +33,14 @@ source = "https://github.com/scomicon/building-generator"
 icon = "icons/building_generator.png"
 categories = ["decoration", "utility", "worldgen"]
 tags = ["building", "architecture", "procedural", "generator", "builder", "worldedit", "creative"]
+
+[[versions]]
+version = "0.4.0"
+published = "2026-11-26"
+game = "26.3"
+file = "building_generator-0.4.0.hmod"
+sha256 = "c10929520d8514bbca3d87b0adb46fb4b9cafe76202e074f9b08117063426cd6"
+changelog = "v0.4.0: Added Settlement 2.0 (secondary ring avenues on >=60x60, smooth roads with automatic river bridges, up to 12 district lots + central parks, walkable perimeter ramparts with bastions & gatehouses, shoreline docks), live Biome Auto-Style & Biome Palette Engine, and universal 0-100% Wear/Ruin & Overgrowth controls (masonry cracking, copper oxidation, collapse/rubble, biome flora, vines) persisted in favorites and BG2 v4 share codes."
 
 [[versions]]
 version = "0.3.0"
