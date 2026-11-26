@@ -35,6 +35,14 @@ categories = ["decoration", "utility", "worldgen"]
 tags = ["building", "architecture", "procedural", "generator", "builder", "worldedit", "creative"]
 
 [[versions]]
+version = "0.4.1"
+published = "2026-11-26"
+game = "26.3"
+file = "building_generator-0.4.1.hmod"
+sha256 = "a1507dcfbbd1b8010857be7ad56cebcb7855da101f73a05f5decd1fea3093265"
+changelog = "v0.4.1: Fixed bridge bank entry steps (flush per-bank ground/road anchoring, flat thresholds, facing stairs and slab plateau ramps) and guaranteed >=3-block overhead clearance across FortifiedGate arches/iron bars, CoveredTimber beams/eaves, TaikoMoon Torii gates, Aqueduct piers/channels, Suspension braces, Pontoon gazebos, and Settlement 2.0 bridges."
+
+[[versions]]
 version = "0.4.0"
 published = "2026-11-26"
 game = "26.3"
