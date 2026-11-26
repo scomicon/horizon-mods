@@ -35,6 +35,14 @@ categories = ["decoration", "utility", "worldgen"]
 tags = ["building", "architecture", "procedural", "generator", "builder", "worldedit", "creative"]
 
 [[versions]]
+version = "0.4.3"
+published = "2026-11-27"
+game = "26.3"
+file = "building_generator-0.4.3.hmod"
+sha256 = "bd6686388999714b2aa67905f4e4a37c6a83cd150cd6874eb6dccfef5a0d714c"
+changelog = "v0.4.3: Fixed gen_bridge Aqueduct/Pontoon narrow-span min > max clamp panic inside Settlement 2.0 and live 3D preview (hook screen_render_post), and hardened dynamic clamp bounds across all themes, roofs, and UI scrollbars."
+
+[[versions]]
 version = "0.4.2"
 published = "2026-11-27"
 game = "26.3"
