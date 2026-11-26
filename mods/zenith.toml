@@ -30,6 +30,17 @@ tags = ["pbr", "shadows", "reflections", "volumetric", "atmosphere", "water", "a
 screenshots = ["screenshots/zenith/1.jpg", "screenshots/zenith/2.jpg", "screenshots/zenith/3.jpg", "screenshots/zenith/4.jpg", "screenshots/zenith/5.jpg"]
 
 [[versions]]
+version = "0.2.1"
+published = "2026-11-27"
+game = "26.3"
+file = "zenith-0.2.1.hshader"
+sha256 = "299951b5dee8c6b4704580609dd4394a2a9b9f018f9351a6198a22fceea4f21e"
+changelog = """
+Zenith 0.2.1:
+- Fixed (Zenith RT): large translucent ghost copies of a glass pane over the sky and the ground near a lit window, most often after a quick camera turn at night. Clear glass was mistaken for stained glass, so the traced window light projected the glass frame into the air; only coloured glass counts now, and coloured windows still cast their tinted light shafts.
+- Zenith (this package) is unchanged apart from the version number."""
+
+[[versions]]
 version = "0.2.0"
 published = "2026-11-24"
 game = "26.3"
