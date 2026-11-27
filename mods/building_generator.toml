@@ -37,6 +37,14 @@ categories = ["decoration", "utility", "worldgen"]
 tags = ["building", "architecture", "procedural", "generator", "builder", "worldedit", "creative"]
 
 [[versions]]
+version = "0.6.1"
+published = "2026-11-27"
+game = "26.3"
+file = "building_generator-0.6.1.hmod"
+sha256 = "74ff0bb6dda8725092610ef2532947e264c2e803341205a1297e3586eb5927ab"
+changelog = "v0.6.1: Fixed mid-air terrain placement (5x5 35th-pct sampling & click aim offset), prevented wooden water stilts on dry slopes while deepening foundation/turret/arcade masonry skirts to -16 with desert sandstone skirts, upgraded Settlement 2.0 grading/canals/bastions/gatehouses/pocket parks, enforced complete 2-high doors across batches/air-only/window/turret/arcade passes, grounded porch decks with 1-step stairs & wider sign clearance, and sealed landmark & multi-wing gable roofs."
+
+[[versions]]
 version = "0.6.0"
 published = "2026-11-27"
 game = "26.3"
