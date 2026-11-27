@@ -37,6 +37,14 @@ categories = ["decoration", "utility", "worldgen"]
 tags = ["building", "architecture", "procedural", "generator", "builder", "worldedit", "creative"]
 
 [[versions]]
+version = "0.7.2"
+published = "2026-11-28"
+game = "26.3"
+file = "building_generator-0.7.2.hmod"
+sha256 = "db62a3dc940d26f7ac4709e486feb7e563b0939c943e375417480bbc96b42c10"
+changelog = "v0.7.2: Bound 2-point Road & Auto-Bridge generation to the player's currently selected BuildStyle across all 9 styles, BuildStyle::Auto biome resolution, and Tab 3 custom palettes; added Tab 4 road style button, live HUD/3D wireframe style feedback ([R] width, [/] style), per-player style memory for /buildgen connect & road, and optional [style] parameter on /buildgen road."
+
+[[versions]]
 version = "0.7.1"
 published = "2026-11-28"
 game = "26.3"
