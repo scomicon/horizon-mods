@@ -37,6 +37,14 @@ categories = ["decoration", "utility", "worldgen"]
 tags = ["building", "architecture", "procedural", "generator", "builder", "worldedit", "creative"]
 
 [[versions]]
+version = "0.7.1"
+published = "2026-11-28"
+game = "26.3"
+file = "building_generator-0.7.1.hmod"
+sha256 = "e0bce23f7db5a60db89402fd1052b4cc6427ac0119bc73b0354348449994f3d4"
+changelog = "v0.7.1: Fixed remaining floating blocks and hanging streetlamps in Settlements, sloped terrain, Japanese Engawa verandas, yard props, bridges, ships, and weathered ruins via terrain-aware connected-component BFS pruning, foundation column anchoring, spaced streetlamp placement, doorway post protection, and safe outer halo bounds."
+
+[[versions]]
 version = "0.7.0"
 published = "2026-11-28"
 game = "26.3"
