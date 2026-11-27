@@ -1,29 +1,31 @@
 id = "building_generator"
 kind = "native-mod"
 name = "Building Generator"
-summary = "Bilingual (EN/RU) procedural architecture mod: live 3D hologram with collision highlights, [H] frame toggle & Move 3D, container loot, Settlement 2.0, Biome Auto-Style, 72 presets."
+summary = "Bilingual (EN/RU) procedural architecture mod: 3D hologram & Move 3D, Multi-Level Dungeons & Mineshafts, Estate Compounds, persistent disk Undo/Redo, Settlement 2.0, 76 presets."
 description = """
 **Building Generator** is an MIT-licensed procedural architecture generator for **Horizon** (Minecraft: Java Edition `26.3`, Horizon Native Mod API `0.2`).
 
-Generate detailed multi-room houses, castles, temples, monumental landmarks, bridges, airship docks, and entire terrain-following walled cities from English or Russian text prompts, noise seeds, or the built-in 72-structure catalog. Full **English (default) & Russian** localization with an in-game **`Lang: EN` / `Язык: RU`** toggle button in the GUI header.
+Generate detailed multi-room houses, castles, temples, monumental landmarks, bridges, airship docks, **Multi-Level Dungeons & Mineshafts**, **Rural Estate & Farm Compounds**, and entire terrain-following walled cities from English or Russian text prompts, noise seeds, or the built-in 76-structure catalog (across 11 Categories). Full **English (default) & Russian** localization with an in-game **`Lang: EN` / `Язык: RU`** toggle button in the GUI header.
 
 ### Key Features
 
-- **61 Structure Themes & 72 Presets:** Pantheon, Parthenon, Colosseum, Hanging Gardens, Ishtar Gate, Mosque Palace, Angkor Temple, Water Shrine, Sphinx, Bailey Castle, City Gatehouse, Monastery, Jousting Arena, Military Outpost, Star Fort, Apothecary, Bakery/Winery, Town Hall, Opera House, Museum, Bank Vault, Academy, Galleon Ship, Shipyard, Train Station with locomotive, Airship Dock, Hydroelectric Dam, Circus Big Top, Skyscraper, Steampunk Factory, Stadium, Bunker, Spaceport Rocket, Offshore Oil Rig, Mage Tower, Hobbit Hole, Mushroom Cottage, Subterranean Mausoleum, Dwarven Hall, Dragon Sanctuary, Stonehenge Portal, Viking Longhouse, Alpine Chalet, Desert Kasbah, 9 Bridge Archetypes, Venetian Floating Village (`FloatingVillage`), and **Settlement 2.0**.
+- **Multi-Level Subterranean Dungeons & Mineshafts (`Dungeon`, `dungeon` / `mine` presets):** Carves 1–3 branching underground tiers (`y = -18..surface`) connected by walkable switchback stairs (`>= 3`-block headroom), surface gatehouses, corner libraries, armories, glow-moss cisterns, Dwarven lava foundry sanctums, and abandoned timbered mineshafts with minecart rails, ore veins, and curated loot chests.
+- **Estate & Farm Compounds (`Estate`, `estate` / `vineyard_estate` presets):** Full countryside homesteads featuring perimeter fencing + carriage gate, cobbled avenues, procedural Manor House, Timber Barn, Windmill (`>= 34x34`), irrigated crop fields (`farmland` + water channels + wheat/carrots/potatoes/beetroots + scarecrow), fenced livestock paddock with shelter & water cauldron, orchard trees, and terrain adaptation across all sizes (`7x7x5..96x96x48`).
+- **61 Structure Themes & 76 Presets:** Pantheon, Parthenon, Colosseum, Hanging Gardens, Ishtar Gate, Mosque Palace, Angkor Temple, Water Shrine, Sphinx, Bailey Castle, City Gatehouse, Monastery, Jousting Arena, Military Outpost, Star Fort, Apothecary, Bakery/Winery, Town Hall, Opera House, Museum, Bank Vault, Academy, Galleon Ship, Shipyard, Train Station with locomotive, Airship Dock, Hydroelectric Dam, Circus Big Top, Skyscraper, Steampunk Factory, Stadium, Bunker, Spaceport Rocket, Offshore Oil Rig, Mage Tower, Hobbit Hole, Mushroom Cottage, Subterranean Mausoleum, Dwarven Hall, Dragon Sanctuary, Stonehenge Portal, Viking Longhouse, Alpine Chalet, Desert Kasbah, 9 Bridge Archetypes, Venetian Floating Village (`FloatingVillage`), and **Settlement 2.0**.
 - **Settlement 2.0 Urban Districts:** Larger `settlement`/`town`/`city` footprints (`>= 60x60`) generate secondary ring avenues, smooth terrain-following roads (`<= 1` step/tile slope) with automatic wooden/stone river bridges, up to 12 balanced district lots, intentional central parks & fountain plazas, pocket biome trees, shoreline piers, and walkable fortified perimeter ramparts with corner bastions and arched gatehouses.
 - **Biome Auto-Style & Biome Palette Engine:** When Style is `Auto` and `Biome` sync is active, client and server inspect the live world biome (`building_generator:biome_query` / `biome_reply`) and adapt both architectural style and natural block palette to the surrounding biome (`cherry_grove`, `desert`, `badlands`, `snowy`, `jungle`, `swamp`, `pale_garden`, `taiga`, `savanna`, `deep_dark`, etc.).
 - **Universal Wear / Ruin & Overgrowth (`0–100%`):** Tab 2 sliders apply structural aging across all 61 themes, landmarks, bridges, colosseum, and settlements — masonry cracking, 4-stage copper oxidation, shattered panes, height-biased collapse with fallen rubble and indoor cobwebs, directional vines, biome-aware moss/flora, and heavy-overgrowth saplings (persisted in `favorites.txt` and `BG2` v4 share codes).
 - **Interactive GUI (`F8`) & Instant EN/RU Switch:**
   - **Header Controls:** One-click `Lang: EN` / `Язык: RU` switch translating tabs, presets, material slots, BOM estimate, HUD overlays, BossBar, and `/buildgen` messages (saved locally to `lang.txt`), plus **`Blocks: N` / `Смета: N`** Material Estimate modal with block icons, stack formatting, door/bed item pairing, and clipboard export.
   - **1. Size & Area:** custom footprints up to `96×96×48`, `-Y`/`+Y` elevation nudging, interactive world corner selection (`R` rotate entrance, `PgUp`/`PgDn` height), terrain skirt & stilt adaptation over water, **Air Only** mode (only replaces air blocks; saved in `favorites.txt` & `BG2:...` share codes), and live 3D hologram preview with vertical slicing (`[` / `]`).
-  - **2. Style & Noise + Preset Catalog:** category/style/roof overrides, live `Biome` auto-style toggle, `Wear %` / `Moss %` controls, 5 tri-state feature toggles, seed history, quick navigation (`◀` / `▶`), and a dedicated searchable 72-preset Catalog browser (supports both EN and RU queries).
+  - **2. Style & Noise + Preset Catalog:** category/style/roof overrides, live `Biome` auto-style toggle, `Wear %` / `Moss %` controls, 5 tri-state feature toggles, seed history, quick navigation (`◀` / `▶`), and a dedicated searchable 76-preset Catalog browser (supports both EN and RU queries).
   - **3. Materials (30 Architectural Slots):** scrollable inspector with multi-block ordered slot lists, 4 procedural mixing modes (`Patches`, `Scatter`, `Stripes`, `Checker`), and a searchable block picker (`Rec.` / `All` world blocks).
 - **Commands:** `/buildgen`, `/buildgen preset <name>`, `/buildgen generate <description>`, `/buildgen size <w> <d> <h> <description>`, `/buildgen reroll`, `/buildgen undo`, `/buildgen redo` (up to 5 steps), `/buildgen lang <en|ru>`, `/buildgen help`.
 
 ### Permissions & Data
 
 - **OP Level 2+ Enforced:** All build, preset, generate, size, reroll, undo, and redo commands and network payloads require operator permission level 2+; server-side bounds sanitization and `350 ms` per-player network rate limiting protect multiplayer servers (`lang` and `help` remain available to all players).
-- Client favorites and language preference are written locally only to `horizon-mod-data/building_generator/favorites.txt` and `lang.txt`. Makes no external network requests.
+- Client favorites and language preference are written locally only to `horizon-mod-data/building_generator/favorites.txt` and `lang.txt`; server Undo/Redo snapshots (`BGH1` compact column-RLE with canonical block-state names) persist per world save under `<save>/horizon-mod-data/building_generator/` so rollback history survives restarts and isolates across worlds. Makes no external network requests.
 """
 authors = ["Building Generator Contributors"]
 owners = ["scomicon"]
@@ -33,6 +35,14 @@ source = "https://github.com/scomicon/building-generator"
 icon = "icons/building_generator.png"
 categories = ["decoration", "utility", "worldgen"]
 tags = ["building", "architecture", "procedural", "generator", "builder", "worldedit", "creative"]
+
+[[versions]]
+version = "0.6.0"
+published = "2026-11-27"
+game = "26.3"
+file = "building_generator-0.6.0.hmod"
+sha256 = "02dc9f2f69a5246d94f90fd31d8587c7405fbe324cffca3e990df04012e225d4"
+changelog = "v0.6.0: Added Multi-Level Subterranean Dungeons & Mineshafts (BuildCategory::Dungeon with 1-3 deep vertical tiers, walkable switchback stairs, gatehouse entrances, corner armory/library/cistern/alchemist vaults, Dwarven lava foundry, rails & ore veins, and dedicated loot), Rural Estate & Farm Compounds (BuildCategory::Estate with Manor House, Timber Barn, Windmill, irrigated crop fields, fenced livestock paddock & water cauldron), 4 new presets (dungeon, mine, estate, vineyard_estate; 76 total), and Persistent Disk-Backed Undo/Redo (BGH1 binary format stored per save in world_data_files with restart recovery, world-switch isolation, and automatic GUI HUD counter sync)."
 
 [[versions]]
 version = "0.5.0"
