@@ -1,17 +1,17 @@
 id = "building_generator"
 kind = "native-mod"
 name = "Building Generator"
-summary = "Bilingual (EN/RU) procedural architecture mod: 3D hologram & Move 3D, Multi-Level Dungeons & Mineshafts, Estate Compounds, persistent disk Undo/Redo, Settlement 2.0, 76 presets."
+summary = "Bilingual (EN/RU) procedural architecture mod: 3D hologram & Move 3D, Multi-Level Dungeons & Mineshafts, Estate Compounds, persistent disk Undo/Redo, Settlement 2.0, Living Interiors 2.0, smooth radial terrain blend, 2-point Road/Auto-Bridge connector, 73 themes, 88 presets."
 description = """
 **Building Generator** is an MIT-licensed procedural architecture generator for **Horizon** (Minecraft: Java Edition `26.3`, Horizon Native Mod API `0.2`).
 
-Generate detailed multi-room houses, castles, temples, monumental landmarks, bridges, airship docks, **Multi-Level Dungeons & Mineshafts**, **Rural Estate & Farm Compounds**, and entire terrain-following walled cities from English or Russian text prompts, noise seeds, or the built-in 76-structure catalog (across 11 Categories). Full **English (default) & Russian** localization with an in-game **`Lang: EN` / `Язык: RU`** toggle button in the GUI header.
+Generate detailed multi-room houses, castles, temples, monumental landmarks, bridges, airship docks, **Multi-Level Dungeons & Mineshafts**, **Rural Estate & Farm Compounds**, and entire terrain-following walled cities from English or Russian text prompts, noise seeds, or the built-in 88-structure catalog (across 14 Categories). Full **English (default) & Russian** localization with an in-game **`Lang: EN` / `Язык: RU`** toggle button in the GUI header.
 
 ### Key Features
 
 - **Multi-Level Subterranean Dungeons & Mineshafts (`Dungeon`, `dungeon` / `mine` presets):** Carves 1–3 branching underground tiers (`y = -18..surface`) connected by walkable switchback stairs (`>= 3`-block headroom), surface gatehouses, corner libraries, armories, glow-moss cisterns, Dwarven lava foundry sanctums, and abandoned timbered mineshafts with minecart rails, ore veins, and curated loot chests.
 - **Estate & Farm Compounds (`Estate`, `estate` / `vineyard_estate` presets):** Full countryside homesteads featuring perimeter fencing + carriage gate, cobbled avenues, procedural Manor House, Timber Barn, Windmill (`>= 34x34`), irrigated crop fields (`farmland` + water channels + wheat/carrots/potatoes/beetroots + scarecrow), fenced livestock paddock with shelter & water cauldron, orchard trees, and terrain adaptation across all sizes (`7x7x5..96x96x48`).
-- **61 Structure Themes & 76 Presets:** Pantheon, Parthenon, Colosseum, Hanging Gardens, Ishtar Gate, Mosque Palace, Angkor Temple, Water Shrine, Sphinx, Bailey Castle, City Gatehouse, Monastery, Jousting Arena, Military Outpost, Star Fort, Apothecary, Bakery/Winery, Town Hall, Opera House, Museum, Bank Vault, Academy, Galleon Ship, Shipyard, Train Station with locomotive, Airship Dock, Hydroelectric Dam, Circus Big Top, Skyscraper, Steampunk Factory, Stadium, Bunker, Spaceport Rocket, Offshore Oil Rig, Mage Tower, Hobbit Hole, Mushroom Cottage, Subterranean Mausoleum, Dwarven Hall, Dragon Sanctuary, Stonehenge Portal, Viking Longhouse, Alpine Chalet, Desert Kasbah, 9 Bridge Archetypes, Venetian Floating Village (`FloatingVillage`), and **Settlement 2.0**.
+- **73 Structure Themes & 88 Presets (incl. Engineering, Agricultural & DecorArt):** Pantheon, Parthenon, Colosseum, Hanging Gardens, Ishtar Gate, Mosque Palace, Angkor Temple, Water Shrine, Sphinx, Bailey Castle, City Gatehouse, Monastery, Jousting Arena, Military Outpost, Star Fort, Apothecary, Bakery/Winery, Town Hall, Opera House, Museum, Bank Vault, Academy, Galleon Ship, Shipyard, Train Station with locomotive, Airship Dock, Hydroelectric Dam, Circus Big Top, Skyscraper, Steampunk Factory, Stadium, Bunker, Spaceport Rocket, Offshore Oil Rig, Mage Tower, Hobbit Hole, Mushroom Cottage, Subterranean Mausoleum, Dwarven Hall, Dragon Sanctuary, Stonehenge Portal, Viking Longhouse, Alpine Chalet, Desert Kasbah, 9 Bridge Archetypes, Venetian Floating Village (`FloatingVillage`), and **Settlement 2.0**.
 - **Settlement 2.0 Urban Districts:** Larger `settlement`/`town`/`city` footprints (`>= 60x60`) generate secondary ring avenues, smooth terrain-following roads (`<= 1` step/tile slope) with automatic wooden/stone river bridges, up to 12 balanced district lots, intentional central parks & fountain plazas, pocket biome trees, shoreline piers, and walkable fortified perimeter ramparts with corner bastions and arched gatehouses.
 - **Biome Auto-Style & Biome Palette Engine:** When Style is `Auto` and `Biome` sync is active, client and server inspect the live world biome (`building_generator:biome_query` / `biome_reply`) and adapt both architectural style and natural block palette to the surrounding biome (`cherry_grove`, `desert`, `badlands`, `snowy`, `jungle`, `swamp`, `pale_garden`, `taiga`, `savanna`, `deep_dark`, etc.).
 - **Universal Wear / Ruin & Overgrowth (`0–100%`):** Tab 2 sliders apply structural aging across all 61 themes, landmarks, bridges, colosseum, and settlements — masonry cracking, 4-stage copper oxidation, shattered panes, height-biased collapse with fallen rubble and indoor cobwebs, directional vines, biome-aware moss/flora, and heavy-overgrowth saplings (persisted in `favorites.txt` and `BG2` v4 share codes).
@@ -35,6 +35,14 @@ source = "https://github.com/scomicon/building-generator"
 icon = "icons/building_generator.png"
 categories = ["decoration", "utility", "worldgen"]
 tags = ["building", "architecture", "procedural", "generator", "builder", "worldedit", "creative"]
+
+[[versions]]
+version = "0.7.0"
+published = "2026-11-28"
+game = "26.3"
+file = "building_generator-0.7.0.hmod"
+sha256 = "d94fd1830185f4bb9f9ddc2100692312a537ebe2128fe0da834e25d7a26ae81d"
+changelog = "v0.7.0: Added Living Interiors 2.0 (heraldic wall/standing banners, readable bilingual lectern books and signs, doorway pressure plates & Castle/Forge/Tower levers, Dungeon dispenser/tripwire traps, daylight_detector night streetlamps, ArmorStand/ItemFrame/Painting decor, optional NPCs/livestock & clean Undo entity discard, BG2 v5 share codes), Smooth Euclidean Radial Terrain Blending (blend_radius 0..10) & Biome Surface Adaptation (apply_outer_halo_blend), 2-Point Road & Auto-Bridge Connector (gen_road, live 3D bluish corridor preview in Tab 4 World & Decor, /buildgen road & /buildgen connect), and 3 new categories with 12 themes & 12 presets (Engineering: CanalLock/RailwayRoundhouse/GantryDrydock/PowerSubstation; Agricultural: VineyardPress/GrainSiloFarm/OrchardApiary/HorseStables; DecorArt: PlazaFountain/GuardianStatue/HedgeMazePark/ZenKaresansui; 88 presets across 14 categories)."
 
 [[versions]]
 version = "0.6.1"
