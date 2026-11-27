@@ -37,6 +37,14 @@ categories = ["decoration", "utility", "worldgen"]
 tags = ["building", "architecture", "procedural", "generator", "builder", "worldedit", "creative"]
 
 [[versions]]
+version = "0.7.3"
+published = "2026-11-28"
+game = "26.3"
+file = "building_generator-0.7.3.hmod"
+sha256 = "4a1a2a93f1c98927621b29c2020b92b7c747f1596d6843378153a4d2558aa81e"
+changelog = "v0.7.3: Added 1-second bilingual (EN/RU) hover tooltip popups for every functional menu button, dynamic descriptions for all 14 categories, 10 styles, roof/noise/filter options, and all 88 presets in the Preset Catalog, while cleanly excluding material slots and individual block picker tiles."
+
+[[versions]]
 version = "0.7.2"
 published = "2026-11-28"
 game = "26.3"
