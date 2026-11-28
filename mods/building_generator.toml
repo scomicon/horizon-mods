@@ -37,6 +37,14 @@ categories = ["decoration", "utility", "worldgen"]
 tags = ["building", "architecture", "procedural", "generator", "builder", "worldedit", "creative"]
 
 [[versions]]
+version = "0.7.4"
+published = "2026-11-28"
+game = "26.3"
+file = "building_generator-0.7.4.hmod"
+sha256 = "7528b4435f55ae870d37d1609c9be09a7eeca7774a9607822c9083c869a7690a"
+changelog = "v0.7.4: Guaranteed walkable stairs, spiral corner landings, backed ladder hatches, and unobstructed balconies/terrace passages across all multi-story standard buildings, overhang-jetty facades, Settlements, and dedicated monuments/castles/towers."
+
+[[versions]]
 version = "0.7.3"
 published = "2026-11-28"
 game = "26.3"
